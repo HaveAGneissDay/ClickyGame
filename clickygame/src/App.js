@@ -10,10 +10,12 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Clicky Game</h1>
-          <div></div>
-          <div></div>
+          <div className="Message"></div>
+          <div className="score"></div>
+          <div className="topScore"></div>
         </header>
-         <div> </div>
+        <div className="jumbotron"> <h2>Clicky Game</h2> <p>Click on an image to earn points, but don't click on any more than once!</p></div>
+         <div className="imageHolder"> </div>
       </div>
     );
   }
