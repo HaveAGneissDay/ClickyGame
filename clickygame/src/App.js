@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import imageHolder from '../Components/images.js'
 
 //import from game js
 //import from logic js
