@@ -16,6 +16,7 @@
 
 .App-title {
   font-size: 1.5em;
+  float: left;
 }
 
 .App-intro {
@@ -25,4 +26,13 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.score {
+  float: Right;
+  margin: 20px;
+}
+.highScore {
+  float: Right;
+  margin: 20px;
 }
