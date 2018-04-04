@@ -14,7 +14,13 @@ class App extends Component {
             highScore: 0,
             message: "",
           }
+          this.handleIncrement = this.handleIncrement.bind(this);
         }
+  handleIncrement = () => {
+ this.setState({
+   score: this.state.counter + 1,
+ })
+  }
   render() {
     return (
       <div className="App">
@@ -26,7 +32,9 @@ class App extends Component {
           <div className="score"> Score:<Display value={this.state.score} /> </div>
         </header>
         <div className="jumbotron"> <h2>Clicky Game</h2> <p>Click on an image to earn points, but don't click on any more than once!</p></div>
+  
          <div className="imageHolder"> {imageHolder}</div>
+
       </div>
     );
   }

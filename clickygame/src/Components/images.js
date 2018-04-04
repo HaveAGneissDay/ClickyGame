@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import images from './images'
 
-const imageHolder = props => (
+const imageHolder = (props) => (
     <div
         className="thumbnail"
         role="img"
