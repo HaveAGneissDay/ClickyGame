@@ -36,3 +36,7 @@
   float: Right;
   margin: 20px;
 }
+
+.message {
+  position: relative;
+}
