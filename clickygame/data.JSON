@@ -1,0 +1,67 @@
+[
+    {
+     "id" : 1,
+     "imageLink": "../images/BobaFett.png",
+     "clicked": false 
+    }, {
+        "id": 2,
+        "imageLink": "../images/CantinaBand.png",
+        "clicked": false
+    }, {
+        "id": 3,
+        "imageLink": "../images/Chewbacca.png",
+        "clicked": false
+    }, {
+        "id": 4,
+        "imageLink": "../images/CountDooku.png",
+        "clicked": false
+    }, {
+        "id": 5,
+        "imageLink": "../images/DarthVader.png",
+        "clicked": false
+    }, {
+        "id": 6,
+        "imageLink": "../images/Hansolo.png",
+        "clicked": false
+    }, {
+        "id": 7,
+        "imageLink": "../images/KyloRen.png",
+        "clicked": false
+    }, {
+        "id": 8,
+        "imageLink": "../images/Lando.png",
+        "clicked": false
+    }, {
+        "id": 9,
+        "imageLink": "../images/LukeSkywalker.png",
+        "clicked": false
+    }, {
+        "id": 10,
+        "imageLink": "../images/ObiWan.png",
+        "clicked": false
+    }, {
+        "id": 11,
+        "imageLink": "../images/Padme.png",
+        "clicked": false
+    }, {
+        "id": 12,
+        "imageLink": "../images/Palpatine.png",
+        "clicked": false
+    }, {
+        "id": 13,
+        "imageLink": "../images/PrincessLeia.png",
+        "clicked": false
+    }, {
+        "id": 14,
+        "imageLink": "../images/QuiGonJin.png",
+        "clicked": false
+    }, {
+        "id": 15,
+        "imageLink": "../images/Rey.png",
+        "clicked": false
+    }, {
+        "id": 16,
+        "imageLink": "../images/Yoda.png",
+        "clicked": false
+    }
+]

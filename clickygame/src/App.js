@@ -20,8 +20,12 @@ class App extends Component {
  this.setState({
    score: this.state.counter + 1,
  })
+ }
+  randomShuffle() {
+    return Math.random()
   }
-  render() {
+  render() 
+  {
     return (
       <div className="App">
         <header className="App-header">
@@ -32,9 +36,7 @@ class App extends Component {
           <div className="score"> Score:<Display value={this.state.score} /> </div>
         </header>
         <div className="jumbotron"> <h2>Clicky Game</h2> <p>Click on an image to earn points, but don't click on any more than once!</p></div>
-  
          <div className="imageHolder"> {imageHolder}</div>
-
       </div>
     );
   }

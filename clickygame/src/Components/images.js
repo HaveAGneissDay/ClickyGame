@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import images from './images'
+
 
 const imageHolder = (props) => (
     <div
@@ -9,7 +9,13 @@ const imageHolder = (props) => (
         style={{
             backgroundImage: `url(${props.images})`
         }}
-    />
+        onClick={() => props.handleClick(props.id)}
+ />
+// props.map(image => {
+//     return <img key={image} src ={require(`../images/${image}.png`)} alt="" className="image-responsive" />
+// })
+
 );
 
 export default imageHolder;
+
