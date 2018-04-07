@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import imageHolder from './Components/images.js'
-import Display from './Components/display.js'
-import Data from './Components/data.JSON'
+import Display from './Components/display.js';
+import ImageHolder from './Components/images.js';
 
 //import from game js
 //import from logic js
@@ -19,7 +18,7 @@ class App extends Component {
         }
   handleIncrement = () => {
  this.setState({
-   score: this.state.counter + 1,
+   score: this.state.score + 1,
  })
  }
   randomShuffle() {
@@ -37,7 +36,7 @@ class App extends Component {
           <div className="score"> Score:<Display value={this.state.score} /> </div>
         </header>
         <div className="jumbotron"> <h2>Clicky Game</h2> <p>Click on an image to earn points, but don't click on any more than once!</p></div>
-         <div className="imageHolder"> </div>
+         <div className="imageHolder"> <ImageHolder /></div>
       </div>
     );
   }

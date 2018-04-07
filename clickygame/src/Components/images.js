@@ -1,20 +1,11 @@
 import React, { Component } from 'react';
+import Images from './data.JSON';
 
 
 const imageHolder = (props) => (
-    <div
-        className="thumbnail"
-        role="img"
-        aria-label="Star Wars Images"
-        style={{
-            backgroundImage: `url(${props.images})`
-        }}
-        onClick={() => props.handleClick(props.id)}
- />
-// props.map(image => {
-//     return <img key={image} src ={require(`../images/${image}.png`)} alt="" className="image-responsive" />
-// })
-
+        props.Images.map(function (image) {
+            return <div> <img src={props.image.imageLink} className="thumbnail" role="img" aria-label="Star Wars Images" alt={props.image.id} onClick={() => props.handleClick(props.image.id)} /></div>
+        })
 );
 
 export default imageHolder;
