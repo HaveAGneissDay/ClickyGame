@@ -1,67 +1,83 @@
-[
+{ "images" : [
     {
      "id" : 1,
      "imageLink": "../images/BobaFett.png",
+     "name" : "Boba Fett",
      "clicked": false 
     }, {
         "id": 2,
         "imageLink": "../images/CantinaBand.png",
+        "name": "Cantina Band",
         "clicked": false
     }, {
         "id": 3,
         "imageLink": "../images/Chewbacca.png",
+        "name": "Chewbacca",
         "clicked": false
     }, {
         "id": 4,
         "imageLink": "../images/CountDooku.png",
+        "name": "Count Dooku",
         "clicked": false
     }, {
         "id": 5,
         "imageLink": "../images/DarthVader.png",
+        "name": "Darth Vader",
         "clicked": false
     }, {
         "id": 6,
         "imageLink": "../images/Hansolo.png",
+        "name": "Han Solo",
         "clicked": false
     }, {
         "id": 7,
         "imageLink": "../images/KyloRen.png",
+        "name": "Kylo Ren",
         "clicked": false
     }, {
         "id": 8,
         "imageLink": "../images/Lando.png",
+        "name": "Lando",
         "clicked": false
     }, {
         "id": 9,
         "imageLink": "../images/LukeSkywalker.png",
+        "name": "Luke Skywalker",
         "clicked": false
     }, {
         "id": 10,
         "imageLink": "../images/ObiWan.png",
+        "name": "Obi Wan",
         "clicked": false
     }, {
         "id": 11,
         "imageLink": "../images/Padme.png",
+        "name": "Padme",
         "clicked": false
     }, {
         "id": 12,
         "imageLink": "../images/Palpatine.png",
+        "name": "Palpatine",
         "clicked": false
     }, {
         "id": 13,
         "imageLink": "../images/PrincessLeia.png",
+        "name": "Princess Leia",
         "clicked": false
     }, {
         "id": 14,
         "imageLink": "../images/QuiGonJin.png",
+        "name": "Qui Gon Jin",
         "clicked": false
     }, {
         "id": 15,
         "imageLink": "../images/Rey.png",
+        "name": "Rey",
         "clicked": false
     }, {
         "id": 16,
         "imageLink": "../images/Yoda.png",
+        "name": "Yoda",
         "clicked": false
     }
-]
+]}
