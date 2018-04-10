@@ -3,8 +3,8 @@ import './App.css';
 import Display from './Components/display.js';
 import ImageHolder from './Components/imageHolder.js';
 import images from './Components/data.JSON';
-import image1 from './Components/images/BobaFett.png';
-import _ from 'lodash';
+
+//import _ from 'lodash';
 
 
 class App extends Component {
@@ -16,31 +16,62 @@ class App extends Component {
             highScore: 0,
             message: "",
           }
-          this.handleIncrement = this.handleIncrement.bind(this);
+          // this.handleIncrement = this.handleIncrement.bind(this);
           // this.generateimages =this.generateimages.bind(this);
         }
 
-  handleIncrement = () => {
- this.setState({
-   score: this.state.score + 1,
- })
- }
+//   handleIncrement = () => {
+//  this.setState({
+//    score: this.state.score + 1,
+//  })
+//  }
+
+  imageClick = event => {
+    const currentImage = event.target.alt;
+    const ImageHasBeenClicked =
+      this.setState ({hasClicked : true});
+
+    //if you click on an image that has already been selected, the game is reset and cards reordered
+    if (ImageHasBeenClicked) {
+      this.setState({
+        fish: this.state.images.sort(function (a, b) {
+          return 0.5 - Math.random();
+        }),
+        score: 0
+      });
+      this.setState({
+        message : "You lose. Play again?",
+      })
+    } else {
+  this.setState(
+    {
+      images: this.state.images.sort(function (a, b) {
+        return 0.5 - Math.random();
+      }),
+      clickedImages: this.state.clicked = true
+    })
+    this.setState({
+      score: this.state.score + 1
+    })
+    }
+  }
+
+//if you click on an available image, your score is increased and cards reordered
+
 
    // generateimages = () =>  {
   // images.map((image) => (
   //   <ImageHolder
-  //     key={this.image.id}
-  //     hasClick={this.image.clicked}
-  //     id={this.image.id}
-  //     name={this.image.name}
-  //     image={this.image.imageLink}
+  //     key={this.images.id}
+  //     hasClick={this.images.clicked}
+  //     id={this.images.id}
+  //     name={this.images.name}
+  //     image={this.images.imageLink}
   //   />
   // ))
 //}
 
-  randomShuffle() {
-    return Math.random()
-  }
+
   render() 
   {
     //console.log(images);
@@ -57,30 +88,29 @@ class App extends Component {
         {/* {
           _.map(this.state.images.data, (image) => {
             return (
-            <div key={image.id}>
+            <div key={images.id}>
               <ImageHolder
-              key={image.id}
-                hasClick={image.clicked}
-                id={image.id}
-                name={image.name}
-                image={image.imageLink}
+              key={images.id}
+                hasClick={images.clicked}
+                id={imagess.id}
+                name={images.name}
+                image={images.imageLink}
               />
             </div> 
             )
           }) */}
-        {}
-        <ImageHolder 
-        name = {image1}
-        />
-        {/* {this.state.images.map((image) => (
+
+        <div className="wrapper">
+        {this.state.images.map(images => (
           <ImageHolder
-            key = {image.id}
-            hasClick = {this.image.clicked}
-            id = {image.id}
-            name = {image.name}
-            image = {image.imageLink} 
+            key = {images.id}
+            hasClick = {this.images.clicked}
+            id = {images.id}
+            name = {images.name}
+            image = {images.imageLink} 
             />
-          ))} */}
+          ))}
+          </div>
             </div>
     );
   }
