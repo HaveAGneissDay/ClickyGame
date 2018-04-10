@@ -3,10 +3,10 @@ import images from './data.JSON';
 
 
 const ImageHolder = props => (
-    <div className="image" 
+    <div className="image" dataId={props.id}
         onClick={() => props.handleClick(props.id)}>
         <div className="img-container" >
-        <img alt={props.name} src={require("./images/" + props.imageLink)} />
+        <img alt={props.name} src={props.imageLink} />
         </div>
         </div>
 );
