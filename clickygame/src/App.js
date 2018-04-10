@@ -29,7 +29,7 @@ class App extends Component {
   imageClick = event => {
     const currentImage = event.target.alt;
     const ImageHasBeenClicked =
-      this.setState ({hasClicked : true});
+      this.setState ({hasClick : true});
 
     //if you click on an image that has already been selected, the game is reset and cards reordered
     if (ImageHasBeenClicked) {
@@ -48,7 +48,7 @@ class App extends Component {
       images: this.state.images.sort(function (a, b) {
         return 0.5 - Math.random();
       }),
-      clickedImages: this.state.clicked = true
+      clickedImages: this.state.hasClick = true
     })
     this.setState({
       score: this.state.score + 1
