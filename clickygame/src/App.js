@@ -11,7 +11,7 @@ class App extends Component {
         constructor(props) {
           super(props);
           this.state = {
-            images,
+            images : images,
             score: 0,
             highScore: 0,
             message: "",
@@ -26,36 +26,60 @@ class App extends Component {
 //  })
 //  }
 
-  imageClick = event => {
-    const currentImage = event.target.alt;
-    const ImageHasBeenClicked =
-      this.setState ({hasClick : true});
 
-    //if you click on an image that has already been selected, the game is reset and cards reordered
-    if (ImageHasBeenClicked) {
-      this.setState({
-        fish: this.state.images.sort(function (a, b) {
-          return 0.5 - Math.random();
-        }),
-        score: 0
-      });
-      this.setState({
-        message : "You lose. Play again?",
-      })
-    } else {
-  this.setState(
-    {
-      images: this.state.images.sort(function (a, b) {
-        return 0.5 - Math.random();
-      }),
-      clickedImages: this.state.hasClick = true
+
+randomOrganize = event => {
+  this.setState({
+    image: this.state.images.sort(function (a, b) {
+      return 0.5 - Math.random();
     })
-    this.setState({
-      score: this.state.score + 1
-    })
+})
+}
+
+  imageClick = id => {
+    this.state.images.forEach((image) => {
+      if (image.id === id) {
+        if (image.clicked) {
+          this.setState({ message: "YOU LOST!! This card was previously selected."});
+          this.setState({})
+          this.resetGame();
+          return false;
+        }
+        else {
+          this.updateScore();
+          image.clicked = true;
+        }
+        if (this.state.score >= this.state.highScore) {
+          this.newHighScore();
+        }
+      }
+    });
+  }
+  newHighScore = () => {
+    this.setState((state) => ({
+      highScore: this.state.score
+    }))
+  }
+
+  winCondition = () => {
+    if (this.state.score === 16) {
+      this.setState({ message: "You Win"})
+      this.setState({});
+      this.resetGame();
+    }
+    else {
+      setTimeout(() => {
+        this.randomOrganize(this.state.images)
+      }, 500);
     }
   }
 
+  resetGame = () => {
+    this.state.images.forEach((image) => {
+      image.clicked = false;
+    })
+    this.setState({ score: 0 })
+  }
 //if you click on an available image, your score is increased and cards reordered
 
 
