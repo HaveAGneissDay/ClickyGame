@@ -1,11 +1,12 @@
 import React from 'react';
-import images from './data.JSON';
+
 
 
 const ImageHolder = props => (
     <div className="image" dataId={props.id}
         onClick={() => props.handleClick(props.id)}>
         <div className="img-container" >
+        {/* <img src={props.imageLink} alt="finished recipe" /> */}
         <img alt={props.name} src={props.imageLink} />
         </div>
         </div>

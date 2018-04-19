@@ -1,7 +1,7 @@
 [
     {
      "id" : 1,
-     "imageLink": "./images/BobaFett.png",
+     "imageLink": "images/BobaFett.png",
      "name" : "Boba Fett",
      "clicked": false 
     }, {
@@ -11,7 +11,7 @@
         "clicked": false
     }, {
         "id": 3,
-        "imageLink": "./images/Chewbacca.png",
+        "imageLink": "images/Chewbacca.png",
         "name": "Chewbacca",
         "clicked": false
     }, {

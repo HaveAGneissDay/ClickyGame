@@ -2,30 +2,31 @@ import React, { Component } from 'react';
 import './App.css';
 import Display from './Components/display.js';
 import ImageHolder from './Components/imageHolder.js';
-import images from './Components/data.JSON';
+import data from './Components/data.json';
 
 //import _ from 'lodash';
-
+console.log(data[0].imageLink);
 
 class App extends Component {
-        constructor(props) {
-          super(props);
-          this.state = {
-            images : images,
+        // constructor(props) {
+        //   super(props);
+          state = {
+            data,
             score: 0,
             highScore: 0,
             message: "",
           }
+          
           // this.handleIncrement = this.handleIncrement.bind(this);
           // this.generateimages =this.generateimages.bind(this);
-        }
+        // }
+   
 
 //   handleIncrement = () => {
 //  this.setState({
 //    score: this.state.score + 1,
 //  })
 //  }
-
 
 
 randomOrganize = event => {
@@ -95,7 +96,6 @@ randomOrganize = event => {
   // ))
 //}
 
-
   render() 
   {
     //console.log(images);
@@ -124,17 +124,17 @@ randomOrganize = event => {
             )
           }) */}
 
-        <div className="wrapper">
-        {this.state.images.map(images => (
+        {/* <div className="wrapper"> */}
+
+        {this.state.data.map(image => (
           <ImageHolder
-            key = {images.id}
-            hasClick = {this.images.clicked}
-            id = {images.id}
-            name = {images.name}
-            image = {images.imageLink} 
+            key = {image.id}        
+            id = {image.id}
+            name = {image.name}
+            image = {image.imageLink} 
             />
           ))}
-          </div>
+          {/* </div> */}
             </div>
     );
   }
